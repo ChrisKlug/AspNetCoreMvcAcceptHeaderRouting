@@ -1,2 +1,2 @@
 # Demo of ASP.NET Core MVC API routing using Accept headers
-Basic PoC for using the Accept header to route to different actions to enable API versioning using this header. More information available on my blog at http://chris.59north.com.
+Basic PoC for using the Accept header to route to different actions to enable API versioning using this header. More information available on my blog at [http://chris.59north.com](https://chris.59north.com/post/Versioning-ASPNET-Core-HTTP-APIs-using-Accept-header).
