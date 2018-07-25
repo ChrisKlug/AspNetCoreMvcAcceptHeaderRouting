@@ -3,6 +3,7 @@ using AcceptHeaderRoutingDemo.Web.Models;
 using AcceptHeaderRoutingDemo.Web.Routing;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace AcceptHeaderRoutingDemo.Web.Controllers
@@ -21,7 +22,7 @@ namespace AcceptHeaderRoutingDemo.Web.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetUsers()
         {
-            return Ok(await _users.All());
+            return Ok((await _users.All()).Select(x => UserModel.Create(x)).ToArray());
         }
 
         [HttpGet("{id:int}")]

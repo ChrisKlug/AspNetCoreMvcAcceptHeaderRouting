@@ -6,6 +6,10 @@ namespace AcceptHeaderRoutingDemo.Web.Models
     {
         public const string ContentType = "application/vnd.mydemo.v2.user-extended";
 
+        public ExtendedUserModel()
+        {
+
+        }
         private ExtendedUserModel(int id, string username, string firstName, string lastName, int age)
         {
             Id = id;
@@ -21,11 +25,11 @@ namespace AcceptHeaderRoutingDemo.Web.Models
             return new ExtendedUserModel(user.Id, user.Username, user.FirstName, user.LastName, user.Age);
         }
 
-        public int Id { get; }
-        public string Username { get; }
-        public string FirstName { get; }
-        public string LastName { get; }
-        public string FullName { get; }
-        public int Age { get; }
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string FullName { get; set; }
+        public int Age { get; set; }
     }
 }
